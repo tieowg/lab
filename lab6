@@ -1,0 +1,11 @@
+# Find the indices of columns in a 2D array where the sum of elements is negative
+def menfi_cemli_sutunlar(A):
+    return [j for j in range(len(A[0])) if sum(A[i][j] for i in range(len(A))) < 0]
+
+A = [
+    [1, -2, 3],
+    [-4, -5, 6],
+    [7, -8, -9]
+]
+
+print(menfi_cemli_sutunlar(A))
