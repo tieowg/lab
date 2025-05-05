@@ -1,0 +1,15 @@
+# Create a file from an array, extract numbers divisible by 3 into a new file and calculate their sum
+massiv = [5, 9, 12, 7, 3, 8, 15, 20, 18]
+
+with open("massiv.txt", "w") as f:
+    f.write(" ".join(str(x) for x in massiv))
+
+with open("massiv.txt", "r") as f:
+    ededler = list(map(int, f.read().split()))
+
+bolunenler = [x for x in ededler if x % 3 == 0]
+cem = sum(bolunenler)
+
+with open("bolunenler.txt", "w") as f:
+    f.write(" ".join(str(x) for x in bolunenler) + "\n")
+    f.write(str(cem))
